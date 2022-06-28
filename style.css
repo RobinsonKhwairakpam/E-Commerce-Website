@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    background-color: rgba(22, 21, 21, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+.nav{
+    height: 90px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    box-shadow: 5px 3px 8px #888888;
+    background-color: #38444d;
+    color: white;
+    margin-bottom: 20px;
+    position: fixed;    /*stay on top*/
+    top: 0;
+}
+.header{
+    font-weight: 600;
+    line-height: 90px;
+    font-size: 1.8rem;
+}
+.nav--list {
+    float: right;
+    margin-right: 10px;
+    padding: 0;
+}
+.nav--list li {
+    display: inline-block;
+    margin: 0 10px; 
+    line-height: 80px;
+}
+
+.links:hover {
+    background-color: #555;
+}
+.links {
+    font-size: 1.09rem;
+    text-decoration: none;
+    color: white;
+    padding: 5px 8px;
+}
+.links:hover {
+    background-color: #4b5863;
+    transition: 0.5s;
+}
+.footer--title {
+    color: white;
+}
+.footer {
+    width: 100%;
+    height: 80px;
+    background-color: #38444d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images{
+    max-width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    object-fit: contain;
+}
+.card {
+    width: 250px;
+    height: 300px;
+    margin: 15px 20px; 
+    border: 0.3px solid #888888;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #888888;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.card-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; 
+    margin-top: 100px;
+    margin-bottom: 20px;
+    gap: 1.5rem; 
+    align-items: center;
+    justify-content: center;            
+}
+.cart--number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    background-color: red;
+    transform: translate(80%, -50%);
+}
+.cart-button {
+    cursor: pointer;
+}
+.cart-button:hover {
+    filter: brightness(170%);
+    transition: 0.4s;
+    outline: 0.5px solid white;
+}
+.cart-button:active {
+    filter: contrast(200%);
+}
+.card--title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 20px 15px;
+}
+.cart {
+    margin-top: 2px;
+}
+.cart--add--button {
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    background-color: blue;
+    border: none;
+    margin-top: 13px;
+    margin-left: 12px;
+    border-radius: 10px;
+    color: white;
+    padding: 9px 0;
+    cursor: pointer;
+}
+.cart--add--button:hover {
+    background-color: rgb(0, 0, 196);
+    transition: .2s;
+}
+.cart--add--button:active {
+    background-color: rgb(0, 0, 92);
+    transition: .2s;
+}
+.cart--plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 8px; 
+}
+.cart--button {
+    height: 2rem;
+    width: 2rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.cart--button:hover {
+    background-color: rgb(0, 0, 193);
+    transition: .2s;
+}
+/* blur effect */
+#container.active {
+    position: relative;
+    z-index: -1;
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* toggle button of bars */
+.toggle--button {
+    position: absolute;
+    display: none;
+    top: 1.75rem;
+    right: 1rem;
+    width: 32px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.toggle--button .bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .toggle--button {
+        display: flex;
+    }
+    .nav {
+        position: relative;
+        flex-direction: column;
+    }
+    .nav--list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #38444d;
+        margin: 0;
+    }
+    .card-container{
+        position: relative;
+    }
+    .nav--list li {
+        text-align: center;
+        display: block;
+    }
+    .nav--list li a {
+        padding: 1rem 10rem;
+    }
+    /* toggle Bars */
+    .nav--list.active {
+        display: block;
+    }
+
+}
