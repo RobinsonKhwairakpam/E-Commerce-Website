@@ -55,7 +55,7 @@ body{
 }
 .footer {
     width: 100%;
-    height: 80px;
+    height: 140px;
     background-color: #38444d;
     display: flex;
     align-items: center;
@@ -82,8 +82,8 @@ body{
     display: flex;
     width: 100%;
     flex-wrap: wrap; 
-    margin-top: 100px;
-    margin-bottom: 20px;
+    margin-top: 110px;
+    margin-bottom: 25px;
     gap: 1.5rem; 
     align-items: center;
     justify-content: center;            
@@ -188,6 +188,12 @@ body{
     background-color: white;
     border-radius: 10px;
 }
+#about {
+    margin-top: 100px;
+}
+#contact {
+    margin-top: 100px;
+}
 
 @media (max-width: 700px) {
     .toggle--button {
@@ -206,6 +212,7 @@ body{
     }
     .card-container{
         position: relative;
+        margin-top: 10px;
     }
     .nav--list li {
         text-align: center;
@@ -218,5 +225,24 @@ body{
     .nav--list.active {
         display: block;
     }
+    #contact {
+        margin-top: 0;
+    }
+    #about {
+        margin-top: 0;
+    }
+}
 
+@media (max-width: 650px) {
+    .card {
+        width: 270px;
+        height: 310px;
+        font-size: 1.3rem;
+    }
+    .cart--add--button {
+        margin-top: 22px;
+    }
+    .cart--plus {
+        margin-top: 17px;
+    }
 }
